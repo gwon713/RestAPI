@@ -8,5 +8,5 @@
 * [Detail page](detail-page.md)
 * [Review page](review-page.md)
 * [Payment page](untitled.md)
-* [Progress page\(Unity\)](untitled-1.md)
+* [Unity](untitled-1.md)
 

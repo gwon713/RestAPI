@@ -1,12 +1,12 @@
 ---
-description: 영화 상세 화면
+description: 영화 시청 화면
 ---
 
-# Progress page\(Unity\)
+# Unity
 
-{% api-method method="get" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="get" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Get Progress
+Get Clip
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -37,6 +37,7 @@ Get Progress
     "user_email": "dildong@naver.com", 
     "movie_id": 1,    
     "progress_movie" : 0,
+    "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
     "message" : "get progress success"
 }
@@ -56,9 +57,9 @@ Get Progress
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="post" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Post Progress
+Post Clip
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -98,7 +99,8 @@ Post Progress
 {    
     "user_email": "gildong@naver.com",
     "movie_id": 1,    
-    "progress_movie" : 0
+    "progress_movie" : 0,
+    "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
     "message" : "post progress success"
 }
@@ -118,9 +120,9 @@ Post Progress
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="put" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Put Progress
+Put Clip
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -160,7 +162,8 @@ progress
 {    
     "user_email": "gildong@naver.com", 
     "movie_id": 1,       
-    "progress_movie" : 1
+    "progress_movie" : 1,
+    "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
     "message" : "put progress success"
 }
