@@ -4,9 +4,9 @@ description: 영화 시청 화면
 
 # Unity
 
-{% api-method method="get" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
+{% api-method method="get" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Get Clip
+Get Progress
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -57,9 +57,9 @@ Get Clip
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
+{% api-method method="post" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Post Clip
+Post Progress
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -120,9 +120,9 @@ Post Clip
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case" path="/movie/clip?mvid=1&email=gildong@naver.com" %}
+{% api-method method="put" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Put Clip
+Put Progress
 {% endapi-method-summary %}
 
 {% api-method-description %}
