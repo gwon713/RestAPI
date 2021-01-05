@@ -39,6 +39,7 @@ Get Progress
     "progress_movie" : 0,
     "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
+    "progress_last_num" : 4,
     "message" : "get progress success"
 }
 ```
@@ -79,6 +80,10 @@ Post Progress
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="progress\_last\_num" type="number" required=false %}
+마지막으로 시청한 클립 번호
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="progress\_movie" type="boolean" required=false %}
 영화 시청 여부\(시청중/0 시청완료/1\)
 {% endapi-method-parameter %}
@@ -102,6 +107,7 @@ Post Progress
     "progress_movie" : 0,
     "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
+    "progress_last_num" : 0,
     "message" : "post progress success"
 }
 ```
@@ -142,6 +148,10 @@ Put Progress
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="progress\_last\_num" type="number" required=false %}
+마지막으로 시청한 클립 번호
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="progress\_movie" type="boolean" required=false %}
 영화 시청 여부\(시청중/0 시청완료/1\)
 {% endapi-method-parameter %}
@@ -165,6 +175,7 @@ progress
     "progress_movie" : 1,
     "clip_info" : clip_info.json,
     "progress_clip_info" : progressClipInfo.json,
+    "progress_last_num" : 6,
     "message" : "put progress success"
 }
 ```
