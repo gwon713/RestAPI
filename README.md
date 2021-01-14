@@ -4,9 +4,9 @@ description: 로그인 화면
 
 # Login page
 
-{% api-method method="post" host="movie-in-case" path="/user/logIn" %}
+{% api-method method="post" host="movie-in-case" path="/user/logIn/local" %}
 {% api-method-summary %}
-Post Login
+Post Local Login
 {% endapi-method-summary %}
 
 {% api-method-description %}
