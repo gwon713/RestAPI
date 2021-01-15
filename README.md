@@ -33,11 +33,13 @@ Post Local Login
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_email" : "gildong@naver.com" , 
-    "user_password" : "gildong" ,
-    "user_deleted" : 0,
-    "message" : "post login success"    
+{
+    "user": {
+        "user_email": "test_email",
+        "user_password": "$2b$05$m5dp.T7.Adn/vs.mYoPxVe6Xj6AOGsNgOeDl/9eMLSrcHyE7iNmJK"
+    },
+    "success": true,
+    "message": "로그인 성공."
 }
 ```
 {% endapi-method-response-example %}
@@ -48,7 +50,42 @@ Post Local Login
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "이메일 또는 비밀번호가 올바르지 않습니다."    }
+{
+    "success": false,
+    "message": "비밀번호가 일치하지 않습니다." or "해당 유저가 존재하지 않습니다."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="movie-in-case.com" path="/user/logOut" %}
+{% api-method-summary %}
+Post Logout
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
