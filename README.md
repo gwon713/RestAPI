@@ -66,7 +66,7 @@ Post Logout
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+로그아웃 \(세션 삭제\)
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -81,11 +81,48 @@ Post Logout
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+ 성공적인 로그아웃
 {% endapi-method-response-example-description %}
 
 ```
+{
+    "success": true,
+    "user": {
+        "user_email": "test_email",
+        "user_password": "$2b$05$m5dp.T7.Adn/vs.mYoPxVe6Xj6AOGsNgOeDl/9eMLSrcHyE7iNmJK"
+    },
+    "message": "logout success"
+}
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+ 로그인 필
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": false,
+    "message": "로그인 필요"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+로그아웃 실패
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": false,
+    "user": {
+        "user_email": "test_email",
+        "user_password": "$2b$05$m5dp.T7.Adn/vs.mYoPxVe6Xj6AOGsNgOeDl/9eMLSrcHyE7iNmJK"
+    },
+    "message": "logout fail"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
