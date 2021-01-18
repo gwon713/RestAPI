@@ -16,6 +16,10 @@ Post Email Auth
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="authCode" type="string" required=false %}
+인증코드
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="email" type="string" required=false %}
 인증을 할 email
 {% endapi-method-parameter %}

@@ -16,6 +16,10 @@ Post Password find
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="authCode" type="string" required=false %}
+인증코드
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="email" type="string" required=false %}
 비밀번호를 찾을 사용자 email
 {% endapi-method-parameter %}
@@ -31,7 +35,6 @@ Post Password find
 ```
 {    
     "user_email": "gildong@naver.com",    
-    "email_accCode" : "342523",
     "message": "password find success"    
 }
 ```
