@@ -58,7 +58,7 @@ Post Password find
 
 {% api-method method="put" host="movie-in-case.com" path="/user/findPwd/editPwd" %}
 {% api-method-summary %}
-Put Edit password
+Put Edit password \(로그인 안되어있는 상태\)
 {% endapi-method-summary %}
 
 {% api-method-description %}

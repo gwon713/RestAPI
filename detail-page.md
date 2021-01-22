@@ -4,7 +4,7 @@ description: 영화 상세페이지
 
 # Detail page
 
-{% api-method method="get" host="movie-in-case" path="/movie/detail?mvid=1" %}
+{% api-method method="get" host="movie-in-case.com" path="/movie/detail?mvid=1" %}
 {% api-method-summary %}
 Get Detail
 {% endapi-method-summary %}
@@ -25,22 +25,26 @@ Get Detail
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-movie\_review\_num은 db추가 x
+
 {% endapi-method-response-example-description %}
 
 ```
-{   
-    "detail_poster" : "image link", 
-    "movie_name" : "피금화" , 
-    "movie_genre" : "추리" , 
-    "detail_running_time" : "20~40분" , 
-    "movie_difficulty" : "하" , 
-    "detail_place" : "실내" , 
-    "detail_price" : "무료" , 
-    "detail_plot" : "추리 줄거리 인사동 줄거리 추리추리추리 줄거리" , 
-    "movie_rating_avg" : 4.7 , 
-    "movie_review_num" : 120 ,
-    "message": "get detail success"
+{
+    "success": true,
+    "result": [
+        {
+            "detail_poster": "detail_poster 1",
+            "movie_name": "movie_name 1",
+            "movie_genre": "movie_genre 1",
+            "detail_running_time": "detail_running_time 1",
+            "movie_difficulty": "movie_difficulty 1",
+            "detail_place": "detail_place 1",
+            "detail_price": "detail_price 1",
+            "detail_plot": "detail_plot 1",
+            "movie_rating_avg": 4,
+            "movie_review_num": 3
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -51,7 +55,10 @@ movie\_review\_num은 db추가 x
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "get detail not found"}
+{   
+    "success" : false, 
+    "message": "get detail not found"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

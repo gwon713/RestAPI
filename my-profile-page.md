@@ -58,7 +58,7 @@ Get My profile
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case.com" path="/user/profile/nameAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/nameAuth" %}
 {% api-method-summary %}
 Post Profiile NameAuth
 {% endapi-method-summary %}
@@ -98,7 +98,7 @@ Post Profiile NameAuth
 ```
 {
     "success": false,
-    "user_name" : "중복 이"
+    "user_name" : "중복 이름"
 }
 ```
 {% endapi-method-response-example %}
@@ -106,7 +106,7 @@ Post Profiile NameAuth
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case.com" path="/user/profile/editName" %}
+{% api-method method="put" host="movie-in-case.com" path="/user/editName" %}
 {% api-method-summary %}
 Put Edit name
 {% endapi-method-summary %}
@@ -160,7 +160,7 @@ Put Edit name
 
 {% api-method method="put" host="movie-in-case.com" path="/user/profile/editPwd" %}
 {% api-method-summary %}
-Put Edit password
+Put Edit password \(로그인 되어있는 상태\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -210,7 +210,7 @@ Put Edit password
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case.com" path="/user/profile/deleteAccount" %}
+{% api-method method="put" host="movie-in-case.com" path="/user/deleteAccount" %}
 {% api-method-summary %}
  Put Delete account
 {% endapi-method-summary %}
@@ -221,12 +221,6 @@ Put Edit password
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="email" type="string" required=false %}
-회원 탈퇴를 할 사용자 email
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="email" type="string" required=false %}
 회원 탈퇴를 할 사용자 email

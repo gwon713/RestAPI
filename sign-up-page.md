@@ -4,7 +4,7 @@ description: 회원가입 페이지
 
 # Sign Up page
 
-{% api-method method="post" host="movie-in-case.com" path="/user/signUp/emailAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/emailAuth" %}
 {% api-method-summary %}
 Post Email Auth
 {% endapi-method-summary %}
@@ -35,7 +35,7 @@ Post Email Auth
 ```
 {    
     "success" : true,
-    "user_email": "gildong@naver.com"    
+    "user_email": "test_email"    
 }
 ```
 {% endapi-method-response-example %}
@@ -56,7 +56,7 @@ Post Email Auth
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case.com" path="/user/signUp/nameAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/nameAuth" %}
 {% api-method-summary %}
 Post Name Auth
 {% endapi-method-summary %}
@@ -81,20 +81,10 @@ Post Name Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_name" : "gildong",
-    "message" : "post nameCertified success" 
+{
+    "success": true,
+    "user_name" : "RN_test"
 }
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "nameCertified not found"    }
 ```
 {% endapi-method-response-example %}
 
@@ -104,7 +94,10 @@ Post Name Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "이름 중복."    }
+{
+    "success": false,
+    "user_name" : "중복 이름"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -165,14 +158,8 @@ Post Sign up
 
 ```
 {    
-    "user_email" : "gildong@naver.com", 
-    "user_name" : "gildong", 
-    "user_pass" : "gildongpwd", 
-    "tou_service" : 1, 
-    "tou_personal_info" : 1, 
-    "tou_location_info" : 1, 
-    "tou_marketing_info" : 0,
-    "message" : "post signup success"
+    "success" : true,
+    "result" : 
 }    
 ```
 {% endapi-method-response-example %}
@@ -183,7 +170,10 @@ Post Sign up
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "post signUp not found"    }
+{    
+    "success" : false,
+    "message": "post signUp not found"    
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
