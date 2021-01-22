@@ -4,7 +4,7 @@ description: 영화 시청 화면
 
 # Unity
 
-{% api-method method="get" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="get" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
 {% api-method-summary %}
 Get Progress
 {% endapi-method-summary %}
@@ -19,11 +19,13 @@ Get Progress
 {% api-method-parameter name="mvid" type="integer" required=false %}
 진행 상황을 가져올 영화 id
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="email " type="string" required=false %}
-진행 상황에 해당되는 사용자 email
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="email" type="string" required=false %}
+w진행 상황에 해당되는 사용자 email
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -33,14 +35,18 @@ Get Progress
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_email": "dildong@naver.com", 
-    "movie_id": 1,    
-    "progress_movie" : 0,
-    "clip_info" : clip_info.json,
-    "progress_clip_info" : progressClipInfo.json,
-    "progress_last_num" : 4,
-    "message" : "get progress success"
+{
+    "success": true,
+    "result": [
+        {
+            "user_email": "user_email 1",
+            "movie_id": 1,
+            "progress_movie": 1,
+            "clip_info": "{\"clip_info\": 1}",
+            "progress_clip_info": "{\"progress_clip\": \"put clip\"}",
+            "progress_last_num": 0
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -51,14 +57,17 @@ Get Progress
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "get progress not found"    }
+{
+    "success": false,
+    "message": "message : DB response Not Found"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="post" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
 {% api-method-summary %}
 Post Progress
 {% endapi-method-summary %}
@@ -73,13 +82,13 @@ Post Progress
 {% api-method-parameter name="mvid" type="integer" required=false %}
 진행 상황을 추가할 영화 id
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="email" type="string" required=false %}
-진행 상황을 추가할 영화 사용자 email
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="email" type="string" required=false %}
+진행 상황을 추가할 영화 사용자 email
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="progress\_last\_num" type="number" required=false %}
 마지막으로 시청한 클립 번호
 {% endapi-method-parameter %}
@@ -101,14 +110,18 @@ Post Progress
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_email": "gildong@naver.com",
-    "movie_id": 1,    
-    "progress_movie" : 0,
-    "clip_info" : clip_info.json,
-    "progress_clip_info" : progressClipInfo.json,
-    "progress_last_num" : 0,
-    "message" : "post progress success"
+{
+    "success": true,
+    "result": [
+        {
+            "user_email": "user_email 1",
+            "movie_id": 1,
+            "progress_movie": 1,
+            "clip_info": "{\"clip_info\": 1}",
+            "progress_clip_info": "{\"progress_clip\": \"put clip\"}",
+            "progress_last_num": 0
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -119,14 +132,18 @@ Post Progress
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "post progress not found"    }
+{
+    "success": false,
+    "message": "post progress not found"
+}
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case" path="/movie/progress?mvid=1&email=gildong@naver.com" %}
+{% api-method method="put" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
 {% api-method-summary %}
 Put Progress
 {% endapi-method-summary %}
@@ -141,13 +158,13 @@ Put Progress
 {% api-method-parameter name="mvid" type="integer" required=false %}
 진행 상황을 수정할 영화 id
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="email" type="string" required=false %}
-진행 상황을 수정할 영화 사용자 email
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="email" type="string" required=false %}
+진행 상황으 수정할 사용자 email
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="progress\_last\_num" type="number" required=false %}
 마지막으로 시청한 클립 번호
 {% endapi-method-parameter %}
@@ -169,14 +186,18 @@ progress
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_email": "gildong@naver.com", 
-    "movie_id": 1,       
-    "progress_movie" : 1,
-    "clip_info" : clip_info.json,
-    "progress_clip_info" : progressClipInfo.json,
-    "progress_last_num" : 6,
-    "message" : "put progress success"
+{
+    "success": true,
+    "result": [
+        {
+            "user_email": "user_email 1",
+            "movie_id": 1,
+            "progress_movie": 1,
+            "clip_info": "{\"clip_info\": 1}",
+            "progress_clip_info": "{\"progress_clip\": \"put clip\"}",
+            "progress_last_num": 0
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
@@ -187,7 +208,11 @@ progress
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "put progress not found"    }
+
+{
+    "success": false,
+    "message": "put progress not found"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
