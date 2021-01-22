@@ -4,7 +4,7 @@ description: '영화 포스터, 정보'
 
 # Home
 
-{% api-method method="get" host="movie-in-case.com" path="/movie/info" %}
+{% api-method method="get" host="movie-in-case" path="/movie/info" %}
 {% api-method-summary %}
 Get Movie info
 {% endapi-method-summary %}
@@ -23,41 +23,30 @@ Get Movie info
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "success": true,
-    "result": [
-        {
-            "movie_id": 2,
-            "movie_name": "movie_name 2",
-            "movie_rating_avg": 3,
-            "movie_review_num": 1,
-            "movie_plot": "movie_plot 2",
-            "movie_genre": "movie_genre 2",
-            "movie_difficulty": "movie_difficulty 2",
-            "movie_poster": "movie_poster 2"
-        },
-        {
-            "movie_id": 3,
-            "movie_name": "movie_name 3",
-            "movie_rating_avg": 4.5,
-            "movie_review_num": 2,
-            "movie_plot": "movie_plot 3",
-            "movie_genre": "movie_genre 3",
-            "movie_difficulty": "movie_difficulty 3",
-            "movie_poster": "movie_poster 3"
-        },
-        {
-            "movie_id": 1,
-            "movie_name": "movie_name 1",
-            "movie_rating_avg": 4,
-            "movie_review_num": 3,
-            "movie_plot": "movie_plot 1",
-            "movie_genre": "movie_genre 1",
-            "movie_difficulty": "movie_difficulty 1",
-            "movie_poster": "movie_poster 1"
-        }
-    ]
-}
+[
+    {    
+        "movie_id" : 1 , 
+        "movie_name" : "피금화", 
+        "movie_rating_avg" : 4.7 , 
+        "movie_review_num" : 120 , 
+        "movie_plot" : "줄거리" , 
+        "movie_genre" : "추리" , 
+        "movie_difficulty" : "하" , 
+        "movie_poster" : "image link" ,
+        "message": "get movie info success"
+    },
+    {    
+        "movie_id" : 2 , 
+        "movie_name" : "피금화2", 
+        "movie_rating_avg" : 4.3 , 
+        "movie_review_num" : 180 , 
+        "movie_plot" : "줄거리" , 
+        "movie_genre" : "공" , 
+        "movie_difficulty" : "하" , 
+        "movie_poster" : "image link" ,
+        "message": "get movie info success"
+    }
+]
 ```
 {% endapi-method-response-example %}
 
@@ -67,10 +56,7 @@ Get Movie info
 {% endapi-method-response-example-description %}
 
 ```
-{   
-    "success" : false, 
-    "message": "get movie info not found"
-}
+{    "message": "get movie info not found"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}

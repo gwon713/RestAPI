@@ -87,7 +87,16 @@ Put Edit password \(로그인 안되어있는 상태\)
 ```
 {    
     "success" : true,
-    "result" :    
+    "result": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 9,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    }  
 }
 ```
 {% endapi-method-response-example %}
