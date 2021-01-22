@@ -4,7 +4,7 @@ description: 회원가입 페이지
 
 # Sign Up page
 
-{% api-method method="post" host="movie-in-case" path="/user/emailAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/signUp/emailAuth" %}
 {% api-method-summary %}
 Post Email Auth
 {% endapi-method-summary %}
@@ -34,20 +34,9 @@ Post Email Auth
 
 ```
 {    
-    "user_email": "gildong@naver.com", 
-    "Certifiedcode" : "574394", 
-    "message": "post emailCertified success"    
+    "success" : true,
+    "user_email": "gildong@naver.com"    
 }
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "이메일이 존재하지 않습니다."    }
 ```
 {% endapi-method-response-example %}
 
@@ -57,14 +46,17 @@ Post Email Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "중복 이메일."    }
+{    
+    "success" : false,
+    "message": "중복 이메일."    
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case" path="/user/nameAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/signUp/nameAuth" %}
 {% api-method-summary %}
 Post Name Auth
 {% endapi-method-summary %}
