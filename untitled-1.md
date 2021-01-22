@@ -4,9 +4,9 @@ description: 영화 시청 화면
 
 # Unity
 
-{% api-method method="get" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
+{% api-method method="post" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
 {% api-method-summary %}
-Get Progress
+Post Progress
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -67,9 +67,9 @@ w진행 상황에 해당되는 사용자 email
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case.com" path="/movie/progress?mvid=1" %}
+{% api-method method="post" host="movie-in-case.com" path="/movie/progressAdd?mvid=1" %}
 {% api-method-summary %}
-Post Progress
+Post Progress Add
 {% endapi-method-summary %}
 
 {% api-method-description %}

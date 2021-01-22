@@ -4,7 +4,7 @@ description: 리뷰 페이지
 
 # Review page
 
-{% api-method method="get" host="movie-in-case.com" path="/movie/reviews?mvid=1&loadNum=20" %}
+{% api-method method="get" host="movie-in-case" path="/movie/reviews?mvid=1&loadNum=20" %}
 {% api-method-summary %}
 Get Reviews
 {% endapi-method-summary %}
@@ -33,35 +33,28 @@ Get Reviews
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "success": true,
-    "result": [
-        {
-            "review_id": 8,
-            "review_name": "review_name 6",
-            "review_rating": 3,
-            "review_comment": "review_comment 6",
-            "review_picture": null,
-            "review_time": "2020-12-21T14:01:19.000Z"
-        },
-        {
-            "review_id": 2,
-            "review_name": "review_name 2",
-            "review_rating": 5,
-            "review_comment": "review_comment 2",
-            "review_picture": null,
-            "review_time": "2020-12-17T14:12:13.000Z"
-        },
-        {
-            "review_id": 1,
-            "review_name": "review_name 1",
-            "review_rating": 4,
-            "review_comment": "review_comment 1",
-            "review_picture": "review_picture 1",
-            "review_time": "2020-12-17T14:11:28.000Z"
-        }
-    ]
-}
+[
+    {    
+      "review_num" : 1,    
+      "review_name" : "gildong",
+      "review_movie_id" : 1,
+      "review_rating" : 4,
+      "review_comment" : "인사동 구석구석 돌아보고 있으니 어떤 분들이 혹시 무비인케이스....",
+      "review_picture" : "image link",
+      "review_time" : "20200502-09:20"
+      "message": "get review success"
+    },
+    {    
+      "review_num" : 2,    
+      "review_name" : "reviewer",
+      "review_movie_id" : 1,
+      "review_rating" : 5,
+      "review_comment" : "재미있었습니다 ....",
+      "review_picture" : "image link",
+      "review_time" : "20200503-17:10"
+      "message": "get review success"
+    }
+]
 ```
 {% endapi-method-response-example %}
 
@@ -71,19 +64,16 @@ Get Reviews
 {% endapi-method-response-example-description %}
 
 ```
-{   
-    "success" : false, 
-    "message": "get review not found"    
-}
+{    "message": "get review not found"    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case.com" path="/user/reviewAcc?mvid=1" %}
+{% api-method method="get" host="movie-in-case" path="/user/reviewAcc?mvid=1&email=gildong@naver.com" %}
 {% api-method-summary %}
-Post Review Access
+Get Review Access
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -96,13 +86,11 @@ Post Review Access
 {% api-method-parameter name="mvid" type="integer" required=false %}
 작성할려고 하는 영화 id
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 
-{% api-method-body-parameters %}
 {% api-method-parameter name="email" type="string" required=false %}
-d작성할려고 하는 사용자 email
+작성할려고 하는 사용자email
 {% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -112,15 +100,11 @@ d작성할려고 하는 사용자 email
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "success": true,
-    "result": [
-        {
-            "movie_id": 1,
-            "user_email": "user_email 1",
-            "progress_movie": 1
-        }
-    ]
+{    
+    "movie_id" : 1,
+    "user_email" : "gildong@naver.com",
+    "progress_movie" : 1,
+    "message": "get review access success"
 }
 ```
 {% endapi-method-response-example %}
@@ -131,17 +115,14 @@ d작성할려고 하는 사용자 email
 {% endapi-method-response-example-description %}
 
 ```
-{   
-    "success" : false, 
-    "message": "get review access data not found"    
-}
+{    "message": "get review access data not found"    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case.com" path="/movie/saveReview?mvid=1" %}
+{% api-method method="post" host="movie-in-case" path="/movie/saveReview?mvid=1" %}
 {% api-method-summary %}
 Post Review
 {% endapi-method-summary %}
@@ -184,18 +165,15 @@ Post Review
 {% endapi-method-response-example-description %}
 
 ```
-{
-    "success": true,
-    "result": {
-        "fieldCount": 0,
-        "affectedRows": 1,
-        "insertId": 9,
-        "serverStatus": 2,
-        "warningCount": 0,
-        "message": "",
-        "protocol41": true,
-        "changedRows": 0
-    }
+{    
+    "review_id" : 1,    
+    "review_name" : "gildong",
+    "review_movie_id" : 1,
+    "review_rating" : 5,
+    "review_comment" : "인사동 구석구석 돌아보고 있으니 어떤 분들이 혹시 무비인케이스....",
+    "review_picture" : "image link",
+    "review_time" : "20201210-13:40",
+    "message" : "post review success"
 }
 ```
 {% endapi-method-response-example %}
@@ -206,10 +184,7 @@ Post Review
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "success" : false,
-    "message": "post review data not found"    
-}
+{    "message": "post review data not found"    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
