@@ -6,7 +6,7 @@ description: 내정보 페이지
 
 {% api-method method="get" host="movie-in-case.com" path="/user/profile" %}
 {% api-method-summary %}
-Post My profile
+Get My profile
 {% endapi-method-summary %}
 
 {% api-method-description %}
