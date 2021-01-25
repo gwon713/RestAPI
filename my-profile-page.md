@@ -169,7 +169,11 @@ Put Edit password \(로그인 되어있는 상태\)
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="password" type="string" required=false %}
+{% api-method-parameter name="old\_password" type="string" required=false %}
+현재 비밀번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="new\_password" type="string" required=false %}
 변경할 비밀번호
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
