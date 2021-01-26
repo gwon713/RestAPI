@@ -4,7 +4,7 @@ description: 로그인 화면
 
 # Login page
 
-{% api-method method="post" host="movie-in-case" path="/user/logIn/local" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/logIn/local" %}
 {% api-method-summary %}
 Post Local Login
 {% endapi-method-summary %}
@@ -71,12 +71,6 @@ Post Logout
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -129,5 +123,65 @@ Post Logout
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="post" host="movie-in-case.com" path="/user/sessionCheck" %}
+{% api-method-summary %}
+Post sessionCheck
+{% endapi-method-summary %}
 
+{% api-method-description %}
+ 세션 확
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="email" type="string" required=false %}
+현재 앱기준 로그인 처리되어있는  
+사용자 email\(cookie\)
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : true,
+    message : "로그인 상태"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : "로그인 필요"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : "현재 로그인 정보와 다름"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
