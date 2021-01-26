@@ -4,7 +4,7 @@ description: 회원가입 페이지
 
 # Sign Up page
 
-{% api-method method="post" host="movie-in-case" path="/user/emailAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/emailAuth" %}
 {% api-method-summary %}
 Post Email Auth
 {% endapi-method-summary %}
@@ -16,10 +16,6 @@ Post Email Auth
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="authCode" type="string" required=false %}
-인증코드
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="email" type="string" required=false %}
 인증을 할 email
 {% endapi-method-parameter %}
@@ -34,20 +30,9 @@ Post Email Auth
 
 ```
 {    
-    "user_email": "gildong@naver.com", 
-    "Certifiedcode" : "574394", 
-    "message": "post emailCertified success"    
+    "success" : true,
+    "user_email": "test_email"    
 }
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "이메일이 존재하지 않습니다."    }
 ```
 {% endapi-method-response-example %}
 
@@ -57,27 +42,34 @@ Post Email Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "중복 이메일."    }
+{    
+    "success" : false,
+    "message": "중복 이메일."    
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="movie-in-case" path="/user/nameAuth" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/authCodeCheck" %}
 {% api-method-summary %}
-Post Name Auth
+Post Check Auth Code
 {% endapi-method-summary %}
 
 {% api-method-description %}
-이름 중복 확인
+이메일 인증코드 확인
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="name" type="string" required=false %}
-중복 확인을 위한 name
+{% api-method-parameter name="email" type="string" required=false %}
+인증 코드를 확인 받을 사용자 email
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authCode" type="string" required=false %}
+사용자가 입력한 인증코드
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -89,20 +81,10 @@ Post Name Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_name" : "gildong",
-    "message" : "post nameCertified success" 
+{
+    "success": true,
+    "user_name" : "RN_test"
 }
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "nameCertified not found"    }
 ```
 {% endapi-method-response-example %}
 
@@ -112,7 +94,10 @@ Post Name Auth
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "이름 중복."    }
+{
+    "success": false,
+    "user_name" : "중복 이름"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -173,14 +158,17 @@ Post Sign up
 
 ```
 {    
-    "user_email" : "gildong@naver.com", 
-    "user_name" : "gildong", 
-    "user_pass" : "gildongpwd", 
-    "tou_service" : 1, 
-    "tou_personal_info" : 1, 
-    "tou_location_info" : 1, 
-    "tou_marketing_info" : 0,
-    "message" : "post signup success"
+    "success" : true,
+    "result": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 9,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    }
 }    
 ```
 {% endapi-method-response-example %}
@@ -191,7 +179,10 @@ Post Sign up
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "post signUp not found"    }
+{    
+    "success" : false,
+    "message": "post signUp not found"    
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
