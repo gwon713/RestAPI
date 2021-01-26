@@ -81,7 +81,36 @@ Post Check Auth Code
 {% endapi-method-response-example-description %}
 
 ```
+{
+    success : true,
+    message : '확인되었습니다.'
+}
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '인증 코드가 올바르지 않습니다.'
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '인증 코드가 올바르지 않습니다.'
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -137,6 +166,19 @@ Put Edit password \(로그인 안되어있는 상태\)
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '인증 코드가 올바르지 않습니다.'
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 
@@ -146,6 +188,19 @@ Put Edit password \(로그인 안되어있는 상태\)
 {    
     "success" : false
     "message" : "edit password not found"    
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=409 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '기존 비밀번호는 사용하실 수 없습니다.'
 }
 ```
 {% endapi-method-response-example %}
