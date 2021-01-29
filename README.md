@@ -201,8 +201,8 @@ Post Login Kako
 사용자 email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="accessToken" type="string" required=false %}
-kakao access 토큰
+{% api-method-parameter name="password" type="string" required=false %}
+kakao ID
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
