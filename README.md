@@ -224,6 +224,19 @@ kakao access 토큰
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": false,
+    "message": "비밀번호가 일치하지 않습니다." or "해당 유저가 존재하지 않습니다."
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
