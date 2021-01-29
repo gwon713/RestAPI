@@ -185,9 +185,9 @@ Post sessionCheck
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="" path="" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/logIn/kakao" %}
 {% api-method-summary %}
-
+Post Login Kako
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -214,7 +214,14 @@ kakao access 토큰
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    "user": {
+        "user_email": "test_email",
+        "user_login_type": "kakao"
+    },
+    "success": true,
+    "message": "로그인 성공."
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
