@@ -81,7 +81,7 @@ Post Sign up
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="password" type="string" required=false %}
-회원가입 password
+회원가입 password \(kakao: kakaoID\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="service" type="boolean" required=false %}
