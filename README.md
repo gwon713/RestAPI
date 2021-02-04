@@ -66,7 +66,7 @@ Post Login Kakao
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+카카오 로그인
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -93,6 +93,62 @@ kakao ID
     "user": {
         "user_email": "test_email",
         "user_login_type": "kakao"
+    },
+    "success": true,
+    "message": "로그인 성공."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": false,
+    "message": "비밀번호가 일치하지 않습니다." or "해당 유저가 존재하지 않습니다."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="movie-in-case.com" path="/user/logIn/google" %}
+{% api-method-summary %}
+Post Login Google
+{% endapi-method-summary %}
+
+{% api-method-description %}
+구글 로그인
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="email" type="string" required=false %}
+사용자 email
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="password" type="string" required=false %}
+google ID
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "user": {
+        "user_email": "test_email",
+        "user_login_type": "google"
     },
     "success": true,
     "message": "로그인 성공."
@@ -185,7 +241,7 @@ Post sessionCheck
 {% endapi-method-summary %}
 
 {% api-method-description %}
- 세션 확
+ 세션 확인
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -240,4 +296,6 @@ Post sessionCheck
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
 
