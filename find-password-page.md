@@ -122,7 +122,7 @@ Post Check Auth Code
 ```
 {
     success : false,
-    message : '인증 코드가 올바르지 않습니다.'
+    message : '해당 유저가 존재하지 않습니다.'
 }
 ```
 {% endapi-method-response-example %}
