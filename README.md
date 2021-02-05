@@ -44,6 +44,19 @@ Post Local Login
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 로그인 실패
@@ -100,6 +113,19 @@ kakao ID
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 
@@ -152,6 +178,19 @@ google ID
     },
     "success": true,
     "message": "로그인 성공."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
 }
 ```
 {% endapi-method-response-example %}
