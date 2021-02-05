@@ -243,7 +243,7 @@ Post Logout
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
- 로그인 필
+ 로그인 필요
 {% endapi-method-response-example-description %}
 
 ```
