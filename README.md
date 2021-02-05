@@ -307,7 +307,7 @@ Post sessionCheck
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=403 %}
+{% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -320,7 +320,7 @@ Post sessionCheck
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
