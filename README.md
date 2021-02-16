@@ -44,6 +44,19 @@ Post Local Login
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 로그인 실패
@@ -96,6 +109,19 @@ kakao ID
     },
     "success": true,
     "message": "로그인 성공."
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
 }
 ```
 {% endapi-method-response-example %}
@@ -156,6 +182,19 @@ google ID
 ```
 {% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '휴면 계정입니다.'
+}
+```
+{% endapi-method-response-example %}
+
 {% api-method-response-example httpCode=404 %}
 {% api-method-response-example-description %}
 
@@ -204,7 +243,7 @@ Post Logout
 
 {% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
- 로그인 필
+ 로그인 필요
 {% endapi-method-response-example-description %}
 
 ```
@@ -268,7 +307,7 @@ Post sessionCheck
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=403 %}
+{% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -281,7 +320,7 @@ Post sessionCheck
 ```
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=403 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}

@@ -141,7 +141,7 @@ Post Sign up
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_info" type="boolean" required=false %}
-위치정보 이용 약관
+위치정보 이용약관
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="marketing\_info" type="boolean" required=false %}

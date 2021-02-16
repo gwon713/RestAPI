@@ -237,7 +237,7 @@ Put Edit Terms
 {% endapi-method-summary %}
 
 {% api-method-description %}
-선택 이용약관 수
+선택 이용약관 수정
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -248,7 +248,7 @@ Put Edit Terms
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="marketing\_info" type="boolean" required=false %}
-
+마케팅 정보 수신 약관
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
