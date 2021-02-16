@@ -4,23 +4,17 @@ description: 내정보 페이지
 
 # My profile page
 
-{% api-method method="get" host="movie-in-case" path="/user/profile?email=gildong@naver.com" %}
+{% api-method method="get" host="movie-in-case.com" path="/user/profile" %}
 {% api-method-summary %}
 Get My profile
 {% endapi-method-summary %}
 
 {% api-method-description %}
-내 정보 가져오기
+내 정보 가져오기 \(세션으로 처리함\)
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="email" type="string" required=false %}
-정보를 가져올 사용자 email
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -29,12 +23,16 @@ Get My profile
 {% endapi-method-response-example-description %}
 
 ```
-{    
-    "user_email" : "gildong@naver.com", 
-    "user_name" : "gildong", 
-    "user_password" : "gildongpwd", 
-    "message" : "get my profile success"
-}    
+{
+    "success": true,
+    "result": [
+        {
+            "user_email": "test_email",
+            "user_name": "RN_test",
+            "user_password": "$2b$05$X4yA3.SJ19un8fwaBzEiVueUOIbL00dj5bwXqc863BoLlTjkCBC9y"
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 
@@ -44,14 +42,65 @@ Get My profile
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "get my profile no found"}
+{   
+    "success" : false, 
+    "message": "get my profile no found"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case" path="/user/editName?email=gildong@naver.com" %}
+{% api-method method="post" host="movie-in-case.com" path="/user/nameAuth" %}
+{% api-method-summary %}
+Post Profiile NameAuth
+{% endapi-method-summary %}
+
+{% api-method-description %}
+내 프로필에서 이름 수정할  때 이름 중복 확인
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="name" type="string" required=false %}
+중복 확인을 할 이름
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": true,
+    "user_name" : "RN_test"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=409 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "success": false,
+    "user_name" : "중복 이름"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="movie-in-case.com" path="/user/editName" %}
 {% api-method-summary %}
 Put Edit name
 {% endapi-method-summary %}
@@ -62,12 +111,6 @@ Put Edit name
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="email" type="string" required=false %}
-이름 변경을 할 사용자 email
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required=false %}
 변경할 이름
@@ -83,9 +126,17 @@ Put Edit name
 
 ```
 {    
-    "user_email" : "gildong@naver.com", 
-    "user_name" : "gildong edit", 
-    "message" : "put edit name success"
+    "success : true,
+    "result": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 9,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    } 
 }   
 ```
 {% endapi-method-response-example %}
@@ -97,6 +148,7 @@ Put Edit name
 
 ```
 {    
+    "success" : false,
     "message" : "put edit name not found"
 }   
 ```
@@ -105,22 +157,26 @@ Put Edit name
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="movie-in-case" path="/user/deleteAccount?email=gildong@naver.com" %}
+{% api-method method="put" host="movie-in-case.com" path="/user/profile/editPwd" %}
 {% api-method-summary %}
- Put Delete account
+Put Edit password \(로그인 되어있는 상태\)
 {% endapi-method-summary %}
 
 {% api-method-description %}
-회원 탈퇴
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="email" type="string" required=false %}
-회원 탈퇴를 할 사용자 email
+{% api-method-body-parameters %}
+{% api-method-parameter name="old\_password" type="string" required=false %}
+현재 비밀번호
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+
+{% api-method-parameter name="new\_password" type="string" required=false %}
+변경할 비밀번호
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -131,11 +187,117 @@ Put Edit name
 
 ```
 {    
-    "user_email" : "gildong@naver.com", 
-    "user_name" : "gildong", 
-    "user_password" : "gildongpwd", 
-    "user_deleted" : 1
-    "message" : "put delete user success"
+    "success : true,
+    "result": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 9,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    } 
+}  
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    success : false,
+    message : '현재 비밀번호가 일치하지 않습니다.'
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{    
+    "success" : false,
+    "message" : "put edit password not found"
+}   
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="moive-in-case.com" path="/user/editTerms" %}
+{% api-method-summary %}
+Put Edit Terms
+{% endapi-method-summary %}
+
+{% api-method-description %}
+선택 이용약관 수
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="location\_info" type="boolean" required=false %}
+위치정보 이용약관
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="marketing\_info" type="boolean" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="movie-in-case.com" path="/user/deleteAccount" %}
+{% api-method-summary %}
+ Put Delete account
+{% endapi-method-summary %}
+
+{% api-method-description %}
+회원 탈퇴 \(세션으로 처리\)
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{    
+    "success" : true
+    "result": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 9,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    } 
 }   
 ```
 {% endapi-method-response-example %}
@@ -146,7 +308,10 @@ Put Edit name
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "put delete user not found"}
+{    
+    "success" : false
+    "message": "put delete user not found"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
