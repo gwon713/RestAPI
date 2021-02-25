@@ -37,28 +37,164 @@ Get Reviews
     "success": true,
     "result": [
         {
-            "review_id": 8,
-            "review_name": "review_name 6",
-            "review_rating": 3,
-            "review_comment": "review_comment 6",
+            "review_id": 43,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "Aa",
             "review_picture": null,
-            "review_time": "2020-12-21T14:01:19.000Z"
+            "review_time": "2021-02-03T19:40:54.000Z"
         },
         {
-            "review_id": 2,
-            "review_name": "review_name 2",
-            "review_rating": 5,
-            "review_comment": "review_comment 2",
+            "review_id": 42,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "Tt",
             "review_picture": null,
-            "review_time": "2020-12-17T14:12:13.000Z"
+            "review_time": "2021-02-03T19:18:16.000Z"
         },
         {
-            "review_id": 1,
-            "review_name": "review_name 1",
-            "review_rating": 4,
-            "review_comment": "review_comment 1",
-            "review_picture": "review_picture 1",
-            "review_time": "2020-12-17T14:11:28.000Z"
+            "review_id": 41,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "ㄴ",
+            "review_picture": null,
+            "review_time": "2021-02-03T19:14:17.000Z"
+        },
+        {
+            "review_id": 40,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "ㅠ",
+            "review_picture": null,
+            "review_time": "2021-02-03T18:14:29.000Z"
+        },
+        {
+            "review_id": 39,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "A",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:58:20.000Z"
+        },
+        {
+            "review_id": 38,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "Test",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:56:34.000Z"
+        },
+        {
+            "review_id": 37,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "Cc",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:50:17.000Z"
+        },
+        {
+            "review_id": 36,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "Aw",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:47:12.000Z"
+        },
+        {
+            "review_id": 35,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "Ga",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:46:09.000Z"
+        },
+        {
+            "review_id": 34,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "Asf",
+            "review_picture": null,
+            "review_time": "2021-02-03T17:17:03.000Z"
+        },
+        {
+            "review_id": 32,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "22",
+            "review_picture": null,
+            "review_time": "2021-02-03T00:45:47.000Z"
+        },
+        {
+            "review_id": 31,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "21",
+            "review_picture": null,
+            "review_time": "2021-02-03T00:11:07.000Z"
+        },
+        {
+            "review_id": 30,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "20",
+            "review_picture": "RN_test1_1612342108.jpg",
+            "review_time": "2021-02-02T23:48:28.000Z"
+        },
+        {
+            "review_id": 29,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "19",
+            "review_picture": null,
+            "review_time": "2021-02-02T23:46:25.000Z"
+        },
+        {
+            "review_id": 28,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "18",
+            "review_picture": "RN_test1_1612341953.jpg",
+            "review_time": "2021-02-02T23:45:54.000Z"
+        },
+        {
+            "review_id": 27,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "17",
+            "review_picture": "RN_test1_1612341907.jpg",
+            "review_time": "2021-02-02T23:45:08.000Z"
+        },
+        {
+            "review_id": 26,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "16",
+            "review_picture": "RN_test1_1612341710.jpg",
+            "review_time": "2021-02-02T23:41:51.000Z"
+        },
+        {
+            "review_id": 25,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "15",
+            "review_picture": "RN_test1_1612341660.jpg",
+            "review_time": "2021-02-02T23:41:02.000Z"
+        },
+        {
+            "review_id": 24,
+            "review_name": "RN_test1",
+            "review_liked": 1,
+            "review_comment": "14",
+            "review_picture": "RN_test1_1612341572.jpg",
+            "review_time": "2021-02-02T23:39:32.000Z"
+        },
+        {
+            "review_id": 23,
+            "review_name": "RN_test1",
+            "review_liked": 0,
+            "review_comment": "13",
+            "review_picture": "RN_test1_1612341447.jpg",
+            "review_time": "2021-02-02T23:37:27.000Z"
         }
     ]
 }
@@ -157,8 +293,8 @@ Post Review
 리뷰를 작성하는 사용자 name
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="rating" type="integer" required=false %}
-리뷰 평점
+{% api-method-parameter name="liked" type="boolean" required=false %}
+리뷰  좋아요\(1\) 싫어요\(0\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="comment" type="string" required=false %}

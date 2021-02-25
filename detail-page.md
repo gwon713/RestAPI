@@ -39,10 +39,12 @@ Get Detail
             "detail_running_time": "detail_running_time 1",
             "movie_difficulty": "movie_difficulty 1",
             "detail_place": "detail_place 1",
-            "detail_price": "detail_price 1",
+            "detail_price": "0",
             "detail_plot": "detail_plot 1",
-            "movie_rating_avg": 4,
-            "movie_review_num": 3
+            "review_liked": 15,
+            "review_unliked": 17,
+            "liked_percent": 47,
+            "movie_review_num": 32
         }
     ]
 }

@@ -29,32 +29,35 @@ Get Movie info
         {
             "movie_id": 2,
             "movie_name": "movie_name 2",
-            "movie_rating_avg": 3,
-            "movie_review_num": 1,
+            "liked_percent": 0,
+            "movie_review_num": 2,
             "movie_plot": "movie_plot 2",
             "movie_genre": "movie_genre 2",
             "movie_difficulty": "movie_difficulty 2",
-            "movie_poster": "movie_poster 2"
+            "movie_poster": "breakfast.jpg",
+            "detail_place": "detail_place 2"
         },
         {
             "movie_id": 3,
             "movie_name": "movie_name 3",
-            "movie_rating_avg": 4.5,
-            "movie_review_num": 2,
+            "liked_percent": 67,
+            "movie_review_num": 3,
             "movie_plot": "movie_plot 3",
             "movie_genre": "movie_genre 3",
             "movie_difficulty": "movie_difficulty 3",
-            "movie_poster": "movie_poster 3"
+            "movie_poster": "balloons.jpg",
+            "detail_place": "detail_place 3"
         },
         {
             "movie_id": 1,
             "movie_name": "movie_name 1",
-            "movie_rating_avg": 4,
-            "movie_review_num": 3,
+            "liked_percent": 47,
+            "movie_review_num": 32,
             "movie_plot": "movie_plot 1",
             "movie_genre": "movie_genre 1",
             "movie_difficulty": "movie_difficulty 1",
-            "movie_poster": "movie_poster 1"
+            "movie_poster": "Pygmalion_Part1.PNG",
+            "detail_place": "detail_place 1"
         }
     ]
 }
