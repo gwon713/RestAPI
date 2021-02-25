@@ -41,10 +41,7 @@ Get Detail
             "detail_place": "detail_place 1",
             "detail_price": "0",
             "detail_plot": "detail_plot 1",
-            "review_liked": 15,
-            "review_unliked": 17,
-            "liked_percent": 47,
-            "movie_review_num": 32
+            "liked_percent": 54
         }
     ]
 }
