@@ -23,7 +23,7 @@ Post Progress
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="email" type="string" required=false %}
-w진행 상황에 해당되는 사용자 email
+진행 상황에 해당되는 사용자 email
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
