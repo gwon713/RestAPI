@@ -89,16 +89,8 @@ Post Progress Add
 진행 상황을 추가할 영화 사용자 email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="progress\_last\_num" type="number" required=false %}
-마지막으로 시청한 클립 번호
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="progress\_choice\_info" type="string" required=false %}
 영화 각 클립에 대한 이터 리스트
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="progress\_movie" type="boolean" required=false %}
-영화 시청 여부\(시청중/0 시청완료/1\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="progress\_clip\_info" type="string" required=false %}
@@ -171,10 +163,6 @@ Put Progress
 
 {% api-method-parameter name="progress\_last\_num" type="number" required=false %}
 마지막으로 시청한 클립 번호
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="progress\_choice\_info" type="number" required=false %}
-영화 각 클립에 대한 데이터 리스트
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="progress\_movie" type="boolean" required=false %}
