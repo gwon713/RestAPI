@@ -161,8 +161,12 @@ Put Progress
 진행 상황을 추가할 영화 사용자 email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="progress\_last\_num" type="number" required=false %}
+{% api-method-parameter name="progress\_last\_num" type="integer" required=false %}
 마지막으로 시청한 클립 번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="progress\_last\_card\_num" type="integer" required=false %}
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="progress\_movie" type="boolean" required=false %}
