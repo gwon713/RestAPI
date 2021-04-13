@@ -92,10 +92,6 @@ Post Progress Add
 진행 상황을 추가할 영화 사용자 email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="progress\_choice\_info" type="string" required=false %}
-영화 각 클립에 대한 이터 리스트
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="progress\_clip\_info" type="string" required=false %}
 영화 진행 상황
 {% endapi-method-parameter %}
