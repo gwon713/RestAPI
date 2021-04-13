@@ -162,6 +162,10 @@ Put Progress
 {% endapi-method-query-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="progress\_time" type="string" required=false %}
+진행 상황 마지막으로 업데이트한 시간
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="email" type="string" required=false %}
 진행 상황을 추가할 영화 사용자 email
 {% endapi-method-parameter %}
