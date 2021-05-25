@@ -29,8 +29,7 @@ Get My profile
         {
             "user_email": "test_email",
             "user_name": "RN_test",
-            "user_password": "$2b$05$X4yA3.SJ19un8fwaBzEiVueUOIbL00dj5bwXqc863BoLlTjkCBC9y",
-            ""
+            “user_terms” : "{“user_service” : 1 , “user_personal_info”: 1, “user_location_info” : 0, “user_marketing_info” : 1}"
         }
     ]
 }
