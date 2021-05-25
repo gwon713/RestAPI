@@ -243,12 +243,8 @@ Put Edit Terms
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="location\_info" type="boolean" required=false %}
-위치정보 이용약관
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="marketing\_info" type="boolean" required=false %}
-마케팅 정보 수신 약관
+{% api-method-parameter name="user\_terms" type="string" required=false %}
+이용약관
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
