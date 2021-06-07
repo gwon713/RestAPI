@@ -81,7 +81,7 @@ Post Check Auth Code
 인증코드를 확인 받을 사용자 email
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="auth\_code" type="string" required=false %}
+{% api-method-parameter name="authCode" type="string" required=false %}
 사용자가 입력한 인증코드
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -95,9 +95,8 @@ Post Check Auth Code
 
 ```
 {
-    "success": true,
-    "message": "확인되었습니다.",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoianVsaXVzNzEzQG5hdmVyLmNvbSIsImlhdCI6MTYyMzA0ODk3MCwiZXhwIjoxNjIzMDQ5MDMwfQ.8lPdJNOWBF1mN51bky9ym7GWziK6QyNGza_kCinK3Y0"
+    success : true,
+    message : '확인되었습니다.'
 }
 ```
 {% endapi-method-response-example %}
@@ -142,15 +141,13 @@ Put Edit password \(로그인 안되어있는 상태\)
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="auth\_token" type="string" required=false %}
-인증 토큰
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="email" type="string" required=false %}
 비밀번호를 변경할 사용자의 email
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="authCode" type="string" required=false %}
+사용자가 입력한 인증번호
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="new\_password" type="string" required=false %}

@@ -16,7 +16,7 @@ Post Email Auth
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="authCode" type="string" required=false %}
+{% api-method-parameter name="auth\_code" type="string" required=false %}
 메일로 전송할 인증코드
 {% endapi-method-parameter %}
 
@@ -116,6 +116,10 @@ Post Sign up
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="user\_terms" type="string" required=false %}
+이용 약관
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="login\_type" type="string" required=false %}
 로그인 타입
 {% endapi-method-parameter %}
@@ -130,22 +134,6 @@ Post Sign up
 
 {% api-method-parameter name="password" type="string" required=false %}
 회원가입 password \(kakao: kakaoID\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="service" type="boolean" required=false %}
-서비스 이용약관
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="personal\_info" type="boolean" required=false %}
-개인정보 취급방침
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="location\_info" type="boolean" required=false %}
-위치정보 이용약관
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="marketing\_info" type="boolean" required=false %}
-마케팅 정보 수신 약관
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
