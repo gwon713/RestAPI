@@ -115,6 +115,12 @@ Post Sign up
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="auth\_token" type="string" required=false %}
+인증 토큰
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="user\_terms" type="string" required=false %}
 이용 약관
