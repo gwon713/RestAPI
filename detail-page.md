@@ -38,7 +38,7 @@ Get Detail
             "movie_genre": "movie_genre 1",
             "detail_running_time": "detail_running_time 1",
             "movie_difficulty": "movie_difficulty 1",
-            "detail_place": "detail_place 1",
+            "movie_place": "movie_place 1",
             "detail_price": "0",
             "detail_plot": "detail_plot 1",
             "liked_percent": 54

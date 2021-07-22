@@ -34,7 +34,7 @@ Get Movie info
             "movie_genre": "movie_genre 2",
             "movie_difficulty": "movie_difficulty 2",
             "movie_poster": "breakfast.jpg",
-            "detail_place": "detail_place 2"
+            "movie_place": "movie_place 2"
         },
         {
             "movie_id": 3,
@@ -44,7 +44,7 @@ Get Movie info
             "movie_genre": "movie_genre 3",
             "movie_difficulty": "movie_difficulty 3",
             "movie_poster": "balloons.jpg",
-            "detail_place": "detail_place 3"
+            "movie_place": "movie_place 3"
         },
         {
             "movie_id": 1,
@@ -54,7 +54,7 @@ Get Movie info
             "movie_genre": "movie_genre 1",
             "movie_difficulty": "movie_difficulty 1",
             "movie_poster": "Pygmalion_Part1.PNG",
-            "detail_place": "detail_place 1"
+            "movie_place": "movie_place 1"
         }
     ]
 }
